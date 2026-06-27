@@ -10,14 +10,22 @@ Escuchar eventos de citas creadas publicados por `rednorte-ms-citas` en el topic
 
 - Java 21+
 - Maven Wrapper (`mvnw.cmd`)
-- Kafka corriendo en `localhost:9092`
+- Docker (para levantar Kafka)
 
 ## Levantar Kafka
 
-Desde la carpeta `C:/Users/syste/Downloads/kafka/kafka`:
+Desde la raíz del proyecto (donde está el `docker-compose.yml`):
 
 ```bash
 docker compose up -d
+```
+
+Esto deja Kafka escuchando en `localhost:9092`.
+
+Para apagarlo cuando termines:
+
+```bash
+docker compose down
 ```
 
 ## Ejecucion local
@@ -40,7 +48,7 @@ Archivo: `src/main/resources/application.properties`
 
 ## Prueba funcional
 
-1. Levantar Kafka.
+1. Levantar Kafka (`docker compose up -d`).
 2. Levantar `rednorte-ms-notificaciones`.
 3. Levantar `rednorte-ms-citas`.
 4. Crear una cita desde frontend.
