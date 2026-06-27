@@ -1,5 +1,4 @@
 
-# rednorte-ms-notificaciones
 # RedNorte MS Notificaciones
 
 Microservicio consumidor de eventos Kafka para el caso semestral RedNorte.
